@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.brand-title {
+  font-family: "Star Jedi", arial;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-style {
+  width: 140px;
+  margin-top: 20px;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 5px;
+  height: 38px;
+}
+
+#formulario {
+  background-color: gray;
+}
+
+.formulario {
+  height: 38px;
+}
+
+.p-style {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+}

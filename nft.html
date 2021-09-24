@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://allfont.es/allfont.css?fonts=star-jedi"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav class="navbar navbar-ligth bg-ligth mt-5 row">
+        <h1 class="brand-title col align-self-center">R2D2 Crypto Exchange</h1>
+
+        <div class="navbar-text">
+          <button class="btn btn-ligth border border-dark link-danger">
+            <a href="./index.html">Home Exchange</a>
+          </button>
+          <button class="btn btn-dark link-ligth">
+            <a href="./nft.html">NFT Market</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="modal fade"
+      id="productoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productoModalText"></h5>
+          </div>
+          <div id="imgProductoModal" alt=""></div>
+          <div class="modal-footer">
+            <button
+              id="closeProductoModal"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="productoCompradoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header flex-column">
+            <h5 class="modal-title" id="productoCompradoModalText"></h5>
+            <h5 id="sumaCompra" class="mt-4"></h5>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="closeProductoCompradoModal"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="carritoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productoModalText"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="imgCarritoModal" alt=""></div>
+          <p></p>
+          <div id="gastado" class="modalFooter">
+            <button
+              id="closeProductoModal"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="muestraSaldo" class="text-center col-12 py-1 bg-secondary">
+      <div id="saldoInicial"></div>
+    </div>
+
+    <div id="confirmaCompra"></div>
+
+    <div
+      id="productos"
+      class="d-flex flex-wrap align-items-stretch justify-content-center mt-5"
+    ></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./nft.js"></script>
+  </body>
+</html>
