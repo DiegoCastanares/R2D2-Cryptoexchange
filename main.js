@@ -18,7 +18,7 @@ $(document).ready(function (e) {
     <tr>
       <th scope="row">${dato.name}</th>
       <td>${dato.symbol}</td>
-      <td> ${dato.current_price}</td>
+      <td> $ ${dato.current_price}</td>
       <td><img src="${dato.image} heigth="15%" width="15%" /></td>
     </tr>
   </tbody>
