@@ -1,13 +1,3 @@
-/**
- * Simulador de exchange para compra de moneda R2D2
- * Se debe ingresar en nombre, precio y cantidad de monedas a cambiar,
- * Si el producto del valor y la cantidad de monedas es positivo se habilita
- * la posibilidad de cambio,
- * Se informa cuantas monedas pueden comprarse y se le solicita al usuario
- * que acepte o no el cambio
- * si se acepta se muestra el nuevo saldo en monedas R2D2.
- */
-
 $(document).ready(function (e) {
   $.get(URLGET, function (respuesta, estado) {
     if (estado === "success") {
@@ -125,7 +115,7 @@ const habilitarSwap = () => {
     actualAmount = "";
     actualPrice = "";
     $("#formulario").html(
-      `<h3 id="despedida">Gracias por su visita! pase por nuestro <a href="./nft.html">Market de NFT</a></h3>`
+      `<h3 id="despedida">Gracias por tu visita! pasa por nuestro <a href="./nft.html">Market de NFT</a></h3>`
     );
   });
 };
@@ -184,7 +174,7 @@ function interes() {
 
   function mostrar() {
     $("#swap").append(`
-    <p class="col-12 text-center  fs-4 container mt-3">Por favor indique la cantidad y hasta que fecha le gustaria invertir sus R2D2Coin</p>
+    <p class="col-12 text-center  fs-4 container mt-3">Por favor indica la cantidad y hasta que fecha te gustaria invertir tus R2D2Coin</p>
     <div class="row col-12 container justify-content-center">
     <form action="#" method="get">
 	<input class="col-12" type="range" id="montoInvertir" name="montoInvertir" min="0.1" max="${sessionStorage.actualR2D2}" step="0.1"/>
@@ -224,20 +214,20 @@ function interes() {
       tiempo = fechaFinal * 0.00273973;
 
       if (fechaFinal <= 0 || isNaN(fechaFinal)) {
-        alert("Ingrese una fecha valida");
+        alert("Ingresa una fecha valida");
       } else {
         $("#inversionModal").modal("show");
         $("#inversionModalText").append(
           `
           <div class="row  container justify-content-evenly">
-          <p>Su inversion de ${capitalInicial} R2D2 Coin con un APR de ${
+          <p>Tu inversion de ${capitalInicial} R2D2 Coin con un APR de ${
             interesAnual * 100
-          } % le dara una ganancia de ${interesCompuesto(
+          } % te dara un monto total de ${interesCompuesto(
             capitalInicial,
             interesAnual,
             compound,
             tiempo
-          ).toFixed(2)} y sus depositos quedaran bloqueados hasta el ${
+          ).toFixed(2)} y tus depositos quedaran bloqueados hasta el ${
             sessionStorage.tiempo
           }</p>
       <button id="btnConfirmar" class="btn btn-primary btn-style col-4">Aceptar</button>
@@ -253,7 +243,7 @@ function interes() {
         $("#swap").remove();
         $("#saldo").remove();
         $("#formulario").html(
-          `<h4> Gracias por su confianza, el total de sus fondos se liberaran el ${
+          `<h4> Gracias por tu confianza, el total de tus fondos se liberaran el ${
             sessionStorage.tiempo
           } por un total de ${interesCompuesto(
             capitalInicial,
@@ -273,7 +263,7 @@ function interes() {
         $("#inversionModalText").empty();
         $("#saldo").remove();
         $("#formulario").html(
-          `<h3 id="despedida">Gracias por su visita! pase por nuestro <a href="./nft.html">Market de NFT</a></h3>`
+          `<h3 id="despedida">Gracias por tu visita! pasa por nuestro <a href="./nft.html">Market de NFT</a></h3>`
         );
       });
 

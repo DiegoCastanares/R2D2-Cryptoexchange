@@ -36,7 +36,7 @@ $(document).ready(function () {
             agregarAlCarrito();
             $(e.target).parent().slideUp("slow");
           } else {
-            alert("Su saldo es insuficiente");
+            alert("Tu saldo es insuficiente");
           }
         });
 
